@@ -1,0 +1,367 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Financier display';
+    background-color: #ffffff;
+}
+
+/* Estilos do Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #ffffff;
+    color: white;
+    position: relative;
+}
+
+/* Botão de Menu */
+.menu-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.hamburger-icon::before,
+.hamburger-icon::after {
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    display: block;
+    position: absolute;
+    transition: transform 0.3s;
+}
+
+.hamburger-icon::before {
+    top: -10px;
+}
+
+.hamburger-icon::after {
+    top: 10px;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Botão de Reserva */
+.reserva-btn {
+    background-color: #c79230;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.reserva-btn:hover {
+    background-color: #451800;
+}
+
+/* Estilos do Menu Lateral */
+.sidebar-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 0.85);
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar-menu.open {
+    left: 0;
+}
+
+.sidebar-menu ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+.sidebar-menu ul li {
+    text-align: center;
+}
+
+.sidebar-menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+}
+
+.sidebar-menu ul li a:hover {
+    background-color: #bf934b;
+}
+
+/* Efeito do ícone de menu */
+.menu-button.active .hamburger-icon {
+    background-color: transparent;
+}
+
+.menu-button.active .hamburger-icon::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.menu-button.active .hamburger-icon::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Estilos do Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos da Seção Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.hero-text button {
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e39322;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Footer Normal */
+.footer-normal {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para a seção de galeria */
+.gallery {
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gallery p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 200px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Estilo do botão para ver galeria completa */
+.gallery-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #c7861e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+    background-color: #004d00;
+}
+/* Estilos do Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a:hover {
+    color: #783110;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+
+/* Estilos das Seções */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9; /* Cor de fundo clara para as seções */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+section h2 {
+    font-size: 1.8rem; /* Tamanho do título */
+    margin-bottom: 10px; /* Margem abaixo do título */
+    color: #c79230; /* Cor do texto do título */
+}
+
+section p {
+    font-size: 1rem; /* Tamanho do texto do parágrafo */
+    color: #666; /* Cor do texto do parágrafo */
+}
+
+/* Botão de Reserva */
+.reserva-btn {
+    display: inline-block; /* Permite adicionar margens */
+    margin-top: 20px; /* Margem superior para separar do texto */
+    background-color: #c79230; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Preenchimento do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+}
+
+.reserva-btn:hover {
+    background-color: #451800; /* Cor de fundo ao passar o mouse */
+}
+a {
+    color: black; /* Define a cor do link como preta */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+a:hover {
+    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
+}

@@ -1,0 +1,106 @@
+<!--Participantes-->
+<!--Maria Eduarda de Araujo Souza-->
+<!--Rafael Gomes Messias-->
+<!--Yasmin Catherinne Conceição Bastos-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison Blanke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Botão de Menu -->
+        <button id="menuButton" class="menu-button" onclick="toggleMenu()">
+            <span id="menuIcon" class="hamburger-icon"></span>
+        </button>
+
+        <!-- Logo e Nome do Hotel -->
+        <div class="logo">
+            <span><i>Maison Blanke</i></span>
+        </div>
+
+        <!-- Botão de Reserva -->
+        <a href="quartos.html" class="reserva-btn">Fazer Reserva</a>
+    </header>
+
+    <!-- Menu Lateral -->
+    <nav id="nav-menu" class="sidebar-menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="quartos.html">Suítes</a></li>
+            <li><a href="detalhes.html">Detalhes </a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="banner">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0JXZnwAySM_nej8uzoiTc_wXK_NDdVv8_X80j-AOCha6d7eIkS2XuaWi&s=10" alt="Banner" />
+        </div>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Sejam Bem-vidos ao Hotel Maison Blanke</h1>
+                <p>É com grande prazer que recebemos vocês em nosso hotel, um verdadeiro refúgio de conforto e elegância. Localizada em uma área privilegiada, a Maison Blanke oferece um ambiente acolhedor, perfeito para relaxar e desfrutar de momentos inesquecíveis. Aqui você encontrará serviços de alta qualidade, requintadas e uma equipe dedicada pronta para atender todas as suas necessidades.</p><br>
+                <a href="detalhes.html" class="reserva-btn">Mais Detalhes</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGLNgf7X5KjjnQ8Srp0uwaIk1ItqjO6i81x026iPRt7wzACilHrmzmEGky&s=10" alt="Hotel Image">
+            </div>
+        </section>
+
+        <!-- Seção de Galeria -->
+        <section class="gallery">
+            <h2>Explore Nossa Galeria</h2>
+            <p>Experimente uma variedade de imagens espetaculares com apresentação artística e atenção aos detalhes. Conheça nossa galeria:</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9vYOgC9c3mSo0eYeK-m2dlKfQjbAi2EZlIcs4go0sCBiqhakC4Clvv0&s=10" alt="Paisagem">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR2yxViRQHDQL7OCcRN8A099WHJQaZVAhFuYNz1fWuswqHT0yEtfQOIrtO&s=10" alt="Aproveite a nossa piscina ">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB6VpQ9CgkpdctvNgVRz56SOWKA-A_40Adpe06AeXaTERFF4krFqfn-fQ&s=10" alt="Aproveite as cidades próximas">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAPjCezYzI0FTpzaunwKmLIJ4-zTwhis06WeXhLIo84f6uOmDNYGbe8Uy&s=10" alt="Paisagens">
+                </div> 
+            </div>
+            <button class="gallery-button" onclick="abrirGaleria()">Ver Galeria Completa</button>
+        </section>
+    </main>
+
+    <footer class="footer-normal">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Maison Blanke</h3>
+                <p>Um hotel para você relaxar e se auto reconectar. Venha conhecer essa incrível experiência.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quartos.html">Reservas</a></li>
+                    <li><a href="detalhes.html">Detalhes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contato</h4>
+                <p>Email: contato@maisonBlanke.com</p>
+                <p>Telefone: +55 (11) 1234-5678</p>
+                <p>Endereço: Cordilheira dos Alpes, 6780 Airolo</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Maison Blanke. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

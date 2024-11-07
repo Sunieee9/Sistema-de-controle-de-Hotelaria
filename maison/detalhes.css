@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Financier display';
+    background-color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilos do Header */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    height: 130px;
+    text-align: right;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(79, 77, 77, 0.603);
+}
+
+p {
+    margin-left: 70px;
+    color: #000000;
+    text-align: left;
+}
+
+h1 {
+    padding-left: 70px;
+    color: #3b2503;
+    text-align: left;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #945f08;
+    padding-left: 50px;
+}
+
+
+/* Estilos do Banner */
+.banner {
+    margin-top: 5px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.banner img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos da Seção Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.hero-text button {
+    margin-top: 1.5rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e39322;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos do Footer Normal */
+.footer-normal {
+    background-color: #f7f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos para a seção de galeria */
+
+.gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.gallery p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.gallery-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: center;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.gallery-item {
+    flex: 1 1 650px;
+}
+
+.gallery-item img {
+    width: 700px;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item2 {
+    flex: 1 1 250px;
+}
+
+.gallery-item2 img {
+    width: 460px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.gallery-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #c7861e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+    background-color: #7e4f03;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h3, .footer-section h4 {
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li a:hover {
+    color: #783110;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+
+/* Estilos das Seções */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+section h2 {
+    font-size: 1.8rem; 
+    margin-bottom: 10px; 
+    color: #945f08; 
+}
+
+section p {
+    font-size: 1rem;
+    color: #666;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; 
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+
+<body>
+    <header class="header">
+        <i>
+            <h1>Maison Blanke</h1>
+        </i>
+        <p>Cordilheira dos Alpes, 6780 Airolo</p>
+        <p>Alpes suíços, Suíça</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="galeria.html">Galeria</a></li>
+                <li><a href="quartos.html">Suítes</a></li>
+                <li><a href="detalhes.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-section">
+                <h2>Reserva de Quartos</h2>
+                <div class="formulario-reserva">
+                    <form id="formReserva">
+                        <label for="tipoQuarto">Tipo de Quarto:</label>
+                        <select id="tipoQuarto" required>
+                            <option value="">Selecione o tipo de quarto</option>
+                            <option value="solteiro" data-preco="5000">Swan Lake - R$5000/noite</option>
+                            <option value="casal" data-preco="8000">Lovebirds - R$2500/noite</option>
+                            <option value="suite" data-preco="10000">Luxury - R$10000/noite</option>
+                            <option value="solteiro" data-preco="3000">Premium - R$3000/noite</option>
+                            <option value="casal" data-preco="1500">Morning Sun - R$8000/noite</option>
+                            <option value="suite" data-preco="9200">Delux - R$9200/noite</option>
+                        </select><br><br>
+
+                        <label for="dataCheckIn">Data de Check-in:</label>
+                        <input type="date" id="dataCheckIn" required>
+                        <span id="erroCheckIn" class="mensagem-erro"></span>
+
+                        <label for="dataCheckOut">Data de Check-out:</label>
+                        <input type="date" id="dataCheckOut" required>
+                        <span id="erroCheckOut" class="mensagem-erro"></span>
+                        <br>
+                        <label for="pedidos">Pedidos Especiais:</label>
+                        <select name="pedidosSelecionado" id="pedidos">
+                            <option value="0">Nenhum</option>
+                            <option value="950">Aluguel de Carro - R$950,00 (Detalhes na hora de check in)</option>
+                            <option value="300">Frigobar Incluso - R$300,00 (Tudo dentro do frigobar incluso no pacote)
+                            </option>
+                            <option value="529.99">Reserva de Restaurantes - R$529,99 (Reservas no restaurante e horário
+                                de sua preferência)</option>
+                            <option value="649.99">Turismo - R$649,99 (Instrutor e guia de turismo pelos melhores
+                                passeios da região)</option>
+                        </select>
+                        <br><br>
+                        <button type="submit" class="btn-add">Calcular Estadia</button>
+
+                    </form>
+                </div>
+
+                <i>
+                    <h2>Cadastro</h2>
+                </i>
+                <form id="formCadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required placeholder="Digite o nome">
+
+                    <label for="documento">Documento:</label>
+                    <input type="number" id="documento" name="documento" required placeholder="Digite o número do CPF">
+
+                    <label for="email">Endereço de email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite o e-mail">
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="number" id="telefone" name="telefone" required placeholder="Digite o telefone">
+                </form>
+
+                <br>
+                <i>
+                    <h2>Endereço</h2>
+                </i>
+                <form id="formEndereco">
+                    <label for="pais">País:</label>
+                    <input type="text" id="pais" name="pais" required placeholder="Digite o seu país">
+
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" required placeholder="Digite o seu estado">
+
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro" required placeholder="Digite o seu bairro">
+
+                    <label for="moradia">Endereço de moradia:</label>
+                    <input type="text" id="moradia" name="moradia" required
+                        placeholder="Digite o endereço da sua moradia">
+                </form>
+
+                <br>
+                <i>
+                    <h2>Detalhes de Pagamento</h2>
+                </i>
+                <form id="formDetalhes">
+                    <label for="numeroCartao">Número do Cartão:</label>
+                    <input type="number" id="numeroCartao" name="numeroCartao" required
+                        placeholder="Digite o número do seu cartão">
+
+                    <label for="mmaa">Data de Validade (MM/AA)</label>
+                    <input type="text" id="mmaa" name="mmaa" required placeholder="Digite a data de validade (mm/aa)"
+                        maxlength="5" minlength="5">
+
+                    <label for="cvv">CVV:</label>
+                    <input type="number" id="cvv" name="cvv" required placeholder="Digite o cvv" maxlength="3"
+                        minlength="3">
+
+                    <label for="nomee">Nome no Cartão:</label>
+                    <input type="text" id="nomee" name="nomee" required
+                        placeholder="Digite o nome do titular do cartão">
+
+                    <button type="submit" class="btn-add" onclick="finalizarReserva(event)">Confirmar Reserva
+                        🔒</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <aside>
+        <div class="lateral">
+            <form id="itemForm">
+                <h2><i>Seu carrinho</i></h2>
+                <h2>Resumo da Reserva</h2>
+                <p id="resumoQuarto"></p>
+                <p id="resumoCheckIn"></p>
+                <p id="resumoCheckOut"></p>
+                <p id="resumoDias"></p>
+                <p id="resumoPedidosEspeciais"></p>
+                <p id="resumoTotal"></p>
+                <p id="resumoHora"></p>
+            </form>
+        </div>
+    </aside>
+    <footer class="footer-normal">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Maison Blanke</h3>
+                <p>Um hotel para você relaxar e se auto reconectar. Venha conhecer essa incrível experiência.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="quartos.html">Reservas</a></li>
+                    <li><a href="detalhes.html">Detalhes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h4>Contato</h4>
+                <p>Email: contato@maisonBlanke.com</p>
+                <p>Telefone: +55 (11) 1234-5678</p>
+                <p>Endereço: Alpes Suiços</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Maison Blanke. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="cadastro.js"></script>
+</body>
+
+</html>
